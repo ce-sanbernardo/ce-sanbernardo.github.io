@@ -60,7 +60,7 @@ function con()
 {
 	pie.style.position = "absolute";
 	tittle.innerHTML = "Contactos";
-	text.innerHTML = "ins.sanbernardo@gmail.com<br>ce-sanbernardo@gmail.com<br>https://institutosanbernardo.com.ar";
+	text.innerHTML = "ins.sanbernardo@gmail.com<br>ce-sanbernardo@gmail.com<br><a href='https://institutosanbernardo.com.ar'>Instituto San Bernardo</a>";
 }
 
 
