@@ -11,11 +11,11 @@ let menufloat = document.getElementById("menufloat");
 // Muy importante!!!
 // Acceso a la base de datos
 // donde se ubican los articulos
-let data = JSON.parse(base.articulo);
+let dataINFO = JSON.parse(base.article);
 // Numero de articulos y clave del mismo
-let info = Object.keys(data);
+let info = Object.keys(dataINFO);
 // Acceso al contenido de cada articulo
-let articles = Object.values(data);
+let articles = Object.values(dataINFO);
 
 // pie de pagina
 let pie = document.getElementById("pie");
