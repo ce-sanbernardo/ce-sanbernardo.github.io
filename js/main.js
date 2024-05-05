@@ -27,7 +27,6 @@ let btn_inicio = document.getElementById("inicio");
 btn_inicio.addEventListener("click",inicio);
 function inicio()
 {
-	pie.style.position = "absolute";
 	text.innerHTML = `<p class="parrafo">
 					Este es un blog de difusi&oacute;n de historia 
 					desde una perspectiva nacional cat&oacute;lica.</p>
@@ -58,7 +57,6 @@ let btn_con = document.getElementById("contacto");
 btn_con.addEventListener("click",con);
 function con()
 {
-	pie.style.position = "absolute";
 	tittle.innerHTML = "Contactos";
 	text.innerHTML = "ins.sanbernardo@gmail.com<br>ce-sanbernardo@gmail.com<br><a href='https://institutosanbernardo.com.ar'>Instituto San Bernardo</a>";
 }
@@ -98,7 +96,6 @@ for(let i=0; i<info.length; i++){
 //mecanicas del temario
 for(let i=0; i<info.length; i++){
 	temas[i].addEventListener("click",function(){
-		pie.style.position = "relative";
 		getArticles(i);
 		arti();
 		art();

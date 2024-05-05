@@ -3,6 +3,7 @@
 	background-image: url("cruz_borgona.png");
 	background-size: 100% auto;
 	/*background-repeat: no-repeat;*/
+	overflow-x: hidden;
 }
 
 header{
@@ -44,6 +45,7 @@ h1{
 	border-radius: 0px;
 	border: 5px solid #4b0303;
 	background-color: #a31717;
+	min-height: 100vh;
 }
 .titulo{
 	font: 2.5em italic;
@@ -83,7 +85,7 @@ footer{
 	padding: 1em;
 	margin: -1em;
 	position: absolute;
-	width: 100%;
+	width: 100vw;
 	text-align: center;
 	z-index: 999;
 	bottom: 0;
