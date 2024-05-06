@@ -24,14 +24,31 @@ let pie = document.getElementById("pie");
 
 // Dinamismo del boton de INICIO
 let btn_inicio = document.getElementById("inicio");
-btn_inicio.addEventListener("click",inicio);
+btn_inicio.addEventListener("click",function(){
+	text.innerHTML = createTxt;
+	tittle.innerHTML = createTit
+});
+
 function inicio()
 {
 	text.innerHTML = `<p class="parrafo">
 					Este es un blog de difusi&oacute;n de historia 
 					desde una perspectiva nacional cat&oacute;lica.</p>
 					<p class="parrafo">Disfrute de la recoplaci&oacute;n 
-					de art&iacute;culos.</p>`;
+					de art&iacute;culos.</p>
+					<div class='subtitle'>Introducción</div>
+					<p class='parrafo'>Este es proyecto de código abierto, 
+					para los interesados en ayudar pueden ver el repositorio en 
+					<a href=
+					'https://github.com/ce-sanbernardo/
+					ce-sanbernardo.github.io.git'>Blog de Historia.</a></p>
+					<p class='parrafo'>Si esta interesado en revisarlo, lea el 
+					<a href="https://github.com/ce-sanbernardo/
+					ce-sanbernardo.github.io/blob/main/README.md">Readme.md</a> 
+					del repositorio.</p>
+					<div class='subtitle'>Artículos</div>
+					<p class='parrafo'>Puede acceder a la pestaña de artículos 
+					para seleccionar un tema del que le gustaría averiguar.</p>`;
 	tittle.innerHTML = "Blog de Historia";
 }
 
@@ -58,7 +75,14 @@ btn_con.addEventListener("click",con);
 function con()
 {
 	tittle.innerHTML = "Contactos";
-	text.innerHTML = "ins.sanbernardo@gmail.com<br>ce-sanbernardo@gmail.com<br><a href='https://institutosanbernardo.com.ar'>Instituto San Bernardo</a>";
+	text.innerHTML = `<center>
+	<h1>Correo del instituto San Bernardo:</h1>
+	ins.sanbernardo@gmail.com<br>
+	<h1>Correo de la página:</h1>
+	ce-sanbernardo@gmail.com<br>
+	<h1>Página principal del instituto:</h1>
+	<a href='https://institutosanbernardo.com.ar'>Instituto San Bernardo</a>
+	</center>`;
 }
 
 
@@ -81,7 +105,17 @@ menufloat.innerHTML = `
 </div>
 `;
 
-
+let createTxt,createTit;
+let createLet = false;
+function create()
+{
+	createTxt = document.getElementById("text").innerHTML;
+	createTit = document.getElementById("tittle").innerHTML;
+}
+if(createLet==false){
+	create();
+	createLet = true;
+}
 // Cuerpo del articulo
 let text = document.getElementById("text");
 // Titulo del articulo
@@ -124,9 +158,15 @@ async function getArticles(i)
 
 // Scroll al inicio
 async function scroll(){
-	window.scrollTo({
-		top: 0,
-		behavior: 'smooth'
-	});
+	if(window.chrome){
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+	}else{
+		window.scrollTo({
+			top: 0
+		});
+	}
 }
 
