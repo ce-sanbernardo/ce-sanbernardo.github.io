@@ -11,14 +11,15 @@ let menufloat = document.getElementById("menufloat");
 // Muy importante!!!
 // Acceso a la base de datos
 // donde se ubican los articulos
-let dataINFO = JSON.parse(base.article);
+let dataINFO = JSON.parse(base.great_article);
 // Numero de articulos y clave del mismo
 let info = Object.keys(dataINFO);
 // Acceso al contenido de cada articulo
 let articles = Object.values(dataINFO);
 
-// pie de pagina
-let pie = document.getElementById("pie");
+
+
+
 
 // Dinamismo de la interfaz
 
@@ -29,28 +30,9 @@ btn_inicio.addEventListener("click",function(){
 	tittle.innerHTML = createTit
 });
 
-function inicio()
-{
-	text.innerHTML = `<p class="parrafo">
-					Este es un blog de difusi&oacute;n de historia 
-					desde una perspectiva nacional cat&oacute;lica.</p>
-					<p class="parrafo">Disfrute de la recoplaci&oacute;n 
-					de art&iacute;culos.</p>
-					<div class='subtitle'>Introducción</div>
-					<p class='parrafo'>Este es proyecto de código abierto, 
-					para los interesados en ayudar pueden ver el repositorio en 
-					<a href=
-					'https://github.com/ce-sanbernardo/
-					ce-sanbernardo.github.io.git'>Blog de Historia.</a></p>
-					<p class='parrafo'>Si esta interesado en revisarlo, lea el 
-					<a href="https://github.com/ce-sanbernardo/
-					ce-sanbernardo.github.io/blob/main/README.md">Readme.md</a> 
-					del repositorio.</p>
-					<div class='subtitle'>Artículos</div>
-					<p class='parrafo'>Puede acceder a la pestaña de artículos 
-					para seleccionar un tema del que le gustaría averiguar.</p>`;
-	tittle.innerHTML = "Blog de Historia";
-}
+
+
+
 
 
 // Dinamismo del boton de ARTICULO
@@ -105,6 +87,16 @@ menufloat.innerHTML = `
 </div>
 `;
 
+
+
+//-------------------------------------------------------------------------
+//-------------------------------------------------------------------------
+
+
+//Copia valor original de la página
+
+//Puede ir en el constructor
+
 let createTxt,createTit;
 let createLet = false;
 function create()
@@ -116,6 +108,17 @@ if(createLet==false){
 	create();
 	createLet = true;
 }
+
+
+
+//-------------------------------------------------------------------------
+//-------------------------------------------------------------------------
+
+
+
+// Renderizador
+
+
 // Cuerpo del articulo
 let text = document.getElementById("text");
 // Titulo del articulo
@@ -146,6 +149,10 @@ async function art()
 }
 
 
+//-------------------------------------------------------------------------
+//-------------------------------------------------------------------------
+
+
 // Agarrar articulo elegido
 async function getArticles(i)
 {	
@@ -169,4 +176,5 @@ async function scroll(){
 		});
 	}
 }
+
 
