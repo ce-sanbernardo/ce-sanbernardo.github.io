@@ -17,24 +17,7 @@ header{
 h1{
 	text-align: center;
 }
-.BtnSup{
-	text-align: center;
-	padding: 0.5em;
-	flex: 1;
-	margin: 0 8%;
-	max-width: 200px;
-	background-color: #a31717;
-}
-.MenuSup{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #a31717;
-	margin: -1em;
-}
-.BtnSup:hover{
-	background-color: #e34d4d;
-}
+
 .art{
 	text-align: center;
 	padding: 2%;
@@ -69,6 +52,8 @@ h1{
 	margin-top: -5%;
 	width: 20%;
 	position: fixed;
+	height: 70vh;
+	overflow: auto;
 }
 
 .tema:hover{
@@ -107,3 +92,119 @@ footer{
 	flex: 1;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.MenuVer,.MenuSub{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans';
+}
+
+
+.nave{
+	margin: auto;
+}
+
+.MenuSup{
+	display: flex;
+	align-items: center;
+	background-color: #a31717;
+	margin: -1em;
+	list-style: none;
+	justify-content: space-around;
+}
+.BtnSup:hover{
+	background-color: #e34d4d;
+}
+
+
+.BtnSup{
+	text-align: center;
+	padding: 0.5em;
+	flex: 1;
+	margin: 0 8%;
+	max-width: 200vw;
+	background-color: #a31717;
+}
+
+.MenuSup > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: black;
+	text-decoration: none;
+}
+
+
+.MenuSup li:hover .MenuVer{
+	display: block;
+}
+
+.MenuVer{
+	position: absolute;
+	display: none;
+	list-style: none;
+	width: 18%;
+	background-color: rgba(163, 46, 46, .5);
+	margin-top: 10px;
+}
+
+.MenuVer li:hover{
+	background-color: rgba(163, 46, 46, .8);
+}
+
+.MenuVer li a{
+	display: block;
+	color: white;
+	padding: 8% 8% 8% 10%;
+}
+
+
+
+
+
+
+
+.MenuVer li:hover .MenuSub{
+	display: block;
+}
+
+
+.MenuVer > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: white;
+	text-decoration: none;
+}
+
+.MenuSub{
+	position: absolute;
+	display: none;
+	list-style: none;
+	width: 65%;
+	background-color: rgba(163, 46, 46, .5);
+	margin-left: 100%;
+	margin-top: -45px;
+}
+
+.MenuSub li:hover{
+	background-color: rgba(163, 46, 46, .8);
+}
+
+.MenuSub li a{
+	height: 20px;
+	display: block;
+	color: white;
+	padding: 8% 8% 8% 10%;
+}

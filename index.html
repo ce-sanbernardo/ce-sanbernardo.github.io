@@ -13,15 +13,65 @@
 	<div class="content">
 		<header>
 			<h1>Instituto San Bernardo</h1>
-		<aside class="MenuSup">
-			<div class="BtnSup" id="inicio">Inicio</div>
-			<div class="BtnSup" id="articulo">Articulos</div>
-			<div class="BtnSup" id="contacto">Contactos</div>
-		</aside>
+		<nav class="nave">
+			<ul class="MenuSup">
+				<li class="BtnSup">
+					<a id="inicio">Inicio</a>
+					<ul class="MenuVer">
+						<li>
+							<a>Noticias(no disponible)</a>
+						</li>
+						<li>
+							<a>Blog(no disponible)</a>
+						</li>
+						<li>
+							<a>Artículos divulativos(no disponible)</a>
+						</li>
+					</ul>
+				</li>
+				<li class="BtnSup">
+					<a id="articulo">Articulos</a>
+					<ul class="MenuVer">
+						<li>
+							<a>Tradici&oacute;n Primordial</a>
+							<ul class="MenuSub" id="primordial">
+							</ul>
+						</li>
+						<li>
+							<a>Mundos de la auntiguedad</a>
+							<ul class="MenuSub" id="antigua">
+							</ul>
+						</li>
+						<li>
+							<a>Cristiandad</a>
+							<ul class="MenuSub" id="cristiandad">
+							</ul>
+						</li>
+						<li>
+							<a>Moderna</a>
+							<ul class="MenuSub" id="moderna">
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="BtnSup" id="contacto">
+					<a>Contactos</a>
+<!--					<ul class="MenuVer">
+						<li>
+							<a>Instituto San Bernardo</a>
+						</li>
+						<li>
+							<a>Constacto de la página</a>
+						</li>
+					</ul>
+-->				</li>
+			</ul>
+		</nav>
+
 		</header>
 
 		<nav>
-			<aside id="menufloat" style="display: none;"></aside>
+			<aside id="menufloat" class="menufloat" style="display: none;"></aside>
 			<section class="art">
 				<h3 class="titulo" id="tittle">Blog de Historia</h3>
 				<div id="text">

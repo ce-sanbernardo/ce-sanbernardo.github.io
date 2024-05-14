@@ -1,0 +1,61 @@
+{
+	"primordial":{
+		"Génesis":{
+			"Creación":"js/base/primordial/creacion.json",
+			"default0":"js/base/primordial/default0.json",
+			"default1":"js/base/primordial/default1.json",
+			"default2":"js/base/primordial/default2.json",
+			"default3":"js/base/primordial/default3.json",
+			"default4":"js/base/primordial/default4.json",
+			"default5":"js/base/primordial/default5.json",
+			"default6":"js/base/primordial/default6.json",
+			"Diluvio":"js/base/primordial/diluvio.json"
+		}
+	},
+	"antigua":{
+		"Roma":{
+			"Batalla de Cannas":"js/base/antigua/cannas.json",
+			"Batalla de Cartago":"js/base/antigua/cartago.json"
+		},
+		"Grecia":{
+			"Batalla de Salamina":"js/base/antigua/salamina.json"
+		},
+		"Sumeria":{
+			"Epopeya de Gilgamesh":"js/base/antigua/gilgamesh.json"
+		},
+		"Egipto":{
+			"Batalla de Kush":"js/base/antigua/kush.json"
+		},
+		"Cartago":{
+			"Anibal Barca":"js/base/antigua/anibal.json"
+		}
+	},
+	"cristiandad":{
+		"Reconquista":{
+			"Batalla de las Navas de Tolosa":"js/base/cristiandad/navas_tolosa.json"
+		},
+		"SIRG":{
+			"Barbaroja":"js/base/cristiandad/barbaroja.json"
+		},
+		"Reino Francia":{
+			"San Luis, rey de Francia":"js/base/cristiandad/san_luis.json",
+			"Luis el Piadoso":"js/base/cristiandad/luis_piedad.json"
+		},
+		"Ingleterra":{
+			"Guerra de 100 años":"js/base/cristiandad/100_anos.json",
+			"Ricardo corazón de leon":"js/base/cristiandad/ricardo_leon.json"
+		}
+	},
+	"moderna":{
+		"España":{
+			"Reyes Católicos":"js/base/moderna/reyes_catolicos.json",
+			"Carlos I":"js/base/moderna/carlos_i.json"
+		},
+		"Francia":{
+			"Calvino":"js/base/moderna/calvino.json"
+		},
+		"Inglaterra":{
+			"Enrique VIII":"js/base/moderna/enrique_viii.json"
+		}
+	}
+}
