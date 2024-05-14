@@ -9,28 +9,30 @@ import * as base from './base.js';
 //-------------------------------------------------------------------------
 
 class ManagerSubMenu{
-	constructor(){
+	constructor(list_articles){
 		this.data = new base.base();
-		this.data.getJSON("GET","js/base/list_articles.json");
+		this.data.getJSON("GET",list_articles);
 		this.data.initBase();
 		this.submenu = [
 				document.getElementById("primordial"),
 				document.getElementById("antigua"),
 				document.getElementById("cristiandad"),
-				document.getElementById("moderna")
+				document.getElementById("moderna"),
 			];
-		this.keys = [
-				Object.keys(this.data.data.primordial),
-				Object.keys(this.data.data.antigua),
-				Object.keys(this.data.data.cristiandad),
-				Object.keys(this.data.data.moderna)
-			];
-		this.values = [
-				Object.values(this.data.data.primordial),
-				Object.values(this.data.data.antigua),
-				Object.values(this.data.data.cristiandad),
-				Object.values(this.data.data.moderna)
-			];
+		
+
+
+		this.keys = [];
+		for(let i=0; i<Object.keys(Object.values(this.data.data)).length; i++){
+			this.keys[i] = Object.keys(Object.values(this.data.data)[i]);
+		}
+		this.values = [];
+		for(let i=0; i<Object.keys(Object.values(this.data.data)).length; i++){
+			this.values[i] = Object.values((Object.values(this.data.data))[i]);
+		}
+
+
+
 		this.menufloat = document.getElementById("menufloat");
 		this.subtitles = [];
 		this.ID = [];
@@ -45,9 +47,9 @@ class ManagerSubMenu{
 			}
 		}
 	}
-	addSubMenu(){
-		for(let i=0; i<Object.keys(this.data.data).length; i++){
-			this.submenu[i].innerHTML = this.subtitles[i];
+	addSubMenu(submenu = this.submenu, tamano = Object.keys(this.data.data).length){
+		for(let i=0; i<tamano; i++){
+			submenu[i].innerHTML = this.subtitles[i];
 		}
 	}
 	searchID(){

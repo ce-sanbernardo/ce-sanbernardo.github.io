@@ -1,0 +1,12 @@
+{
+	"biblioteca":{
+		"id":"biblioteca",
+		"autor":"Instituto San Bernardo",
+		"fecha":"",
+		"titulo":"Biblioteca Virtual",
+		"texto":[
+			"<div class='subtitle'><center>Libro X<center></div>",
+			"<a href=''>Imagen</a>"
+		]
+	}
+}

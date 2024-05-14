@@ -2,11 +2,11 @@ import * as SubMenu from './managerSubMenu.js';
 import * as baseManager from './baseManager.js';
 
 class MenuArticles{
-	constructor(){
+	constructor(list_articles,submenu,tamano){
 		this.ManBase = [];
-		this.manager = new SubMenu.ManagerSubMenu();
+		this.manager = new SubMenu.ManagerSubMenu(list_articles);
 		this.manager.initSubMenu();
-		this.manager.addSubMenu();
+		this.manager.addSubMenu(submenu,tamano);
 		this.manager.searchID();
 		this.manager.eventBTNSubgenere();
 		this.ArrayMenuFloat;
@@ -41,5 +41,8 @@ class MenuArticles{
 		}
 	}
 }
+
+
+
 
 export {MenuArticles}
