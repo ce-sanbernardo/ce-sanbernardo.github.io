@@ -1,0 +1,12 @@
+{
+	"biblio_moderna":{
+		"id":"biblio_moderna",
+		"autor":"Instituto San Bernardo",
+		"fecha":"",
+		"titulo":"Biblioteca Virtual - Moderna",
+		"texto":[
+			"<div class='subtitle'><center>Libro X<center></div>",
+			"<a href=''>Imagen</a>"
+		]
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"biblio_teologia":{
+		"id":"biblio_teologia",
+		"autor":"Instituto San Bernardo",
+		"fecha":"",
+		"titulo":"Biblioteca Virtual - Teología",
+		"texto":[
+			"<div class='subtitle'><center>Libro X<center></div>",
+			"<a href=''>Imagen</a>"
+		]
+	}
+}

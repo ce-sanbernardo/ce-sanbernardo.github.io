@@ -12,19 +12,20 @@ import * as baseManager from './baseManager.js';
 class Interface{
 	constructor(){
 		this.inicio = document.getElementById("inicio");
-		this.biblioteca = document.getElementById("biblioteca");
-		this.blog = document.getElementById("blog");
-		this.noticias = document.getElementById("noticias");
+		this.biblioteca = [document.getElementById("biblioteca")];
+		this.blog = [document.getElementById("blog")];
+		this.noticias = [document.getElementById("noticias")];
 		this.contactos = document.getElementById("contacto");
 		this.menufloat = document.getElementById("menufloat");
 		this.menuflotante = [];
 		this.menuflotante[0] = document.getElementById("menufloat");
 		this.menuFloat = false;
+		this.menufloats = [false];
 		this.renderer = new render.render();
 		this.MenuArticles = new menu.MenuArticles("js/base/list_articles.json");
 		this.MenuArticlesBlog = new menu.MenuArticles("js/base/blog.json",this.menuflotante,1);
 		this.MenuArticlesNoticias = new menu.MenuArticles("js/base/noticias.json",this.menuflotante,1);
-
+		this.MenusArticlesBiblioteca = new menu.MenuArticles("js/base/biblioteca.json",this.menuflotante,1);
 
 		this.originTitle = this.renderer.getValueOriginTitle();
 		this.originText = this.renderer.getValueOriginText();
@@ -34,7 +35,7 @@ class Interface{
 		}
 		this.subgeneros = [];
 	}
-	Imenu(index, MenuArticles = this.MenuArticles){
+	Imenu(index, MenuArticles){
 		let keys = [];
 		let values = [];
 		let num = 0;
@@ -60,64 +61,43 @@ num++;
 				MenuArticles.ManBase[i].initArticle(0);
 				this.renderer.renderer(MenuArticles.ManBase[i].title,
 										MenuArticles.ManBase[i].text);
-				if(this.menuFloat==false){
-					this.scroll();
+				this.invisible();
+			});
+		}
+	}
+	btnEvents(menuArticles,button,x){
+		for(let i=0; i<menuArticles.manager.Nsubgeneros; i++){
+			button[i].addEventListener("click",()=>{
+				if(!this.menuFloat){
+					this.Imenu(i,menuArticles);
 					this.menufloat.style.display = "block";
 					this.menuFloat = true;
-				}else{
-					this.scroll();
+					this.menufloats[i+x] = true;
+				}else if(this.menufloats[i+x]){
 					this.menufloat.style.display = "none";
 					this.menuFloat = false;
+					this.menufloats[i+x] = false;
+				}else if(this.menuFloat){
+					this.Imenu(i,menuArticles);
+					this.allFalse(this.menufloats,this.menufloats.length);
+					this.menufloats[i+x] = true;
 				}
 			});
 		}
 	}
 	Ievents(){
+		this.btnEvents(this.MenusArticlesBiblioteca,this.biblioteca,1);
+		this.btnEvents(this.MenuArticlesBlog,this.blog,2);
+		this.btnEvents(this.MenuArticlesNoticias,this.noticias,3);
+		this.btnEvents(this.MenuArticles,this.generos,4);
+
 		this.inicio.addEventListener("click",()=>{
 			this.renderer.renderer(this.originTitle,this.originText);
+			this.invisible();
 		});
-		this.biblioteca.addEventListener("click",()=>{
-			let biblio = new baseManager.baseManager();
-			biblio.selectArticle("js/base/biblioteca.json");
-			biblio.initArticle(0);
-			this.renderer.renderer(biblio.title,biblio.text);
-		});
-		this.blog.addEventListener("click",()=>{
-			if(this.menuFloat==false){
-					this.Imenu(0,this.MenuArticlesBlog);
-					this.menufloat.style.display = "block";
-					this.menuFloat = true;
-				}else{
-					this.Imenu(0,this.MenuArticlesBlog);
-					this.menufloat.style.display = "block";
-					this.menuFloat = false;
-			}
-		});
-		this.noticias.addEventListener("click",()=>{
-			if(this.menuFloat==false){
-					this.Imenu(0,this.MenuArticlesNoticias);
-					this.menufloat.style.display = "block";
-					this.menuFloat = true;
-				}else{
-					this.Imenu(0,this.MenuArticlesNoticias);
-					this.menufloat.style.display = "block";
-					this.menuFloat = false;
-			}
-		});
-		for(let i=0; i<this.MenuArticles.manager.Nsubgeneros; i++){
-			this.generos[i].addEventListener("click",()=>{
-				if(this.menuFloat==false){
-					this.Imenu(i);
-					this.menufloat.style.display = "block";
-					this.menuFloat = true;
-				}else{
-					this.Imenu(i);
-					this.menufloat.style.display = "block";
-					this.menuFloat = false;
-				}
-			});
-		}
+
 		this.contactos.addEventListener("click",()=>{
+			this.invisible();
 			this.renderer.renderer(
 				"Contactos",
 				`<center>
@@ -141,6 +121,17 @@ num++;
 				top: 0
 			});
 		}
+	}
+	allFalse(array,len){
+		for(let j=0; j<len; j++){
+			array[j] = false;
+		}
+	}
+	invisible(){
+		this.scroll();
+		this.menufloat.style.display = "none";
+		this.menuFloat = false;
+		allFalse(this.menufloats,this.menufloats.length);
 	}
 }
 

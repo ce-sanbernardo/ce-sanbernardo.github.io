@@ -4,6 +4,7 @@
 	background-size: 100% auto;
 	/*background-repeat: no-repeat;*/
 	overflow-x: hidden;
+	z-index: -1;
 }
 
 header{
@@ -44,6 +45,10 @@ h1{
 	margin-left: 5%;
 	margin-bottom: 2%;
 }
+.cabeza{
+	position: fixed;
+	z-index: 2;
+}
 .menu{
 	border: 5px solid #4b0303;
 	float: left;
@@ -54,6 +59,7 @@ h1{
 	position: fixed;
 	height: 70vh;
 	overflow: auto;
+	z-index: 1;
 }
 
 .tema:hover{
@@ -62,6 +68,7 @@ h1{
 .tema{
 	font: 1em italic;
 	padding: 2.5%;
+	z-index: 10;
 }
 
 footer{
@@ -106,6 +113,7 @@ footer{
 
 
 .MenuVer,.MenuSub{
+	z-index: 10;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -114,10 +122,12 @@ footer{
 
 
 .nave{
+	z-index: 10;
 	margin: auto;
 }
 
 .MenuSup{
+	z-index: 10;
 	display: flex;
 	align-items: center;
 	background-color: #a31717;
@@ -126,11 +136,13 @@ footer{
 	justify-content: space-around;
 }
 .BtnSup:hover{
+	z-index: 10;
 	background-color: #e34d4d;
 }
 
 
 .BtnSup{
+	z-index: 10;
 	text-align: center;
 	padding: 0.5em;
 	flex: 1;
@@ -140,6 +152,7 @@ footer{
 }
 
 .MenuSup > li > a{
+	z-index: 10;
 	display: block;
 	padding: 15px 20px;
 	color: black;
@@ -148,11 +161,13 @@ footer{
 
 
 .MenuSup li:hover .MenuVer{
+	z-index: 10;
 	display: block;
 }
 
 .MenuVer{
-	position: absolute;
+	z-index: 10;
+	position: fixed;
 	display: none;
 	list-style: none;
 	width: 18%;
@@ -161,10 +176,12 @@ footer{
 }
 
 .MenuVer li:hover{
+	z-index: 10;
 	background-color: rgba(163, 46, 46, .8);
 }
 
 .MenuVer li a{
+	z-index: 10;
 	display: block;
 	color: white;
 	padding: 8% 8% 8% 10%;
@@ -177,11 +194,13 @@ footer{
 
 
 .MenuVer li:hover .MenuSub{
+	z-index: 10;
 	display: block;
 }
 
 
 .MenuVer > li > a{
+	z-index: 10;
 	display: block;
 	padding: 15px 20px;
 	color: white;
@@ -189,6 +208,7 @@ footer{
 }
 
 .MenuSub{
+	z-index: 10;
 	position: absolute;
 	display: none;
 	list-style: none;
@@ -199,10 +219,12 @@ footer{
 }
 
 .MenuSub li:hover{
+	z-index: 10;
 	background-color: rgba(163, 46, 46, .8);
 }
 
 .MenuSub li a{
+	z-index: 10;
 	height: 20px;
 	display: block;
 	color: white;

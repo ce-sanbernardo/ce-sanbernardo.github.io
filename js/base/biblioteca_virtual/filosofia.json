@@ -1,0 +1,12 @@
+{
+	"biblio_filosofia":{
+		"id":"biblio_filosofia",
+		"autor":"Instituto San Bernardo",
+		"fecha":"",
+		"titulo":"Biblioteca Virtual - Filosofía",
+		"texto":[
+			"<div class='subtitle'><center>Libro X<center></div>",
+			"<a href=''>Imagen</a>"
+		]
+	}
+}
