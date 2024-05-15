@@ -131,7 +131,7 @@ num++;
 		this.scroll();
 		this.menufloat.style.display = "none";
 		this.menuFloat = false;
-		allFalse(this.menufloats,this.menufloats.length);
+		this.allFalse(this.menufloats,this.menufloats.length);
 	}
 }
 
