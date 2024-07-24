@@ -105,6 +105,8 @@ num++;
 				ins.sanbernardo@gmail.com<br>
 				<h1>Correo de la página:</h1>
 				ce-sanbernardo@gmail.com<br>
+				<h1>Correo amigo:</h1>
+				LosHerederosDeRosas@gmail.com</br>
 				<h1>Página principal del instituto:</h1>
 				<a href='https://institutosanbernardo.com.ar'>Instituto San Bernardo</a>
 				</center>`);
