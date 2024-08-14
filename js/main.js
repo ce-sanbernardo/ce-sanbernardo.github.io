@@ -4,9 +4,6 @@ import {getBody} from './http.js';
 //botones
 let inicio = document.getElementById("inicio");
 let contac = document.getElementById("contacto");
-let biblio = document.getElementById("biblioteca");
-let notice = document.getElementById("noticias");
-let nblogs = document.getElementById("blog");
 
 //cuerpo del articulo
 let tittle = document.getElementById("tittle");
@@ -30,20 +27,4 @@ contac.addEventListener("click",function(){
 	blog.scroll();
 });
 
-/*
-//eventos sub-inicio biblioteca/noticias/blog
-biblio.addEventListener("click",function(){
-	console.log("Biblioteca!");
-});
-notice.addEventListener("click",function(){
-	console.log("Noticias!");
-});
-nblogs.addEventListener("click",function(){
-	console.log("Blog!");
-});
-*/
 blog.main();
-
-
-
-
