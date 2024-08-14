@@ -1,0 +1,38 @@
+{
+	"primordial":{
+		"subgenero1":{
+			"titulo1":"archivo1"
+		}
+	},
+
+
+
+	"antigua":{
+		"subgenero2":{
+			"titulo2":"archivo2"
+		},
+		"subgenero3":{
+			"titulo3":"archivo3"
+		}	
+	},
+
+
+
+	"cristiandad":{
+		"subgenero4":{
+			"titulo4":"archivo4",
+			"titulo5":"archivo5"
+		}
+	},
+
+
+	"moderna":{
+		"subgenero5":{
+			"titulo6":"archivo6",
+			"titulo7":"archivo7"
+		},
+		"subgenero6":{
+			"titulo8":"archivo8"
+		}
+	}
+}

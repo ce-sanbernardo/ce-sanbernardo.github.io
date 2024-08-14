@@ -1,12 +1,12 @@
 {
 	"biblio":{
-		"biblio":{
-			"Primordial":"js/base/biblioteca_virtual/primordial.json",
-			"Mundos de la antiguedad":"js/base/biblioteca_virtual/antiguedad.json",
-			"Cristiandad":"js/base/biblioteca_virtual/cristiandad.json",
-			"Moderna":"js/base/biblioteca_virtual/moderna.json",
-			"Filosofía":"js/base/biblioteca_virtual/filosofia.json",
-			"Teología":"js/base/biblioteca_virtual/teologia.json"
+		"biblioteca":{
+			"Primordial":"js/base/biblioteca_virtual/primordial",
+			"Mundos de la antiguedad":"js/base/biblioteca_virtual/antiguedad",
+			"Cristiandad":"js/base/biblioteca_virtual/cristiandad",
+			"Moderna":"js/base/biblioteca_virtual/moderna",
+			"Filosofía":"js/base/biblioteca_virtual/filosofia",
+			"Teología":"js/base/biblioteca_virtual/teologia"
 		}
 	}
 }

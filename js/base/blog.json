@@ -1,8 +1,8 @@
 {
 	"blog":{
 		"blog":{
-			"Batalla de Cannas":"js/base/antigua/cannas.json",
-			"Batalla de Cartago":"js/base/antigua/cartago.json"
+			"titulo2":"archivo2",
+			"titulo3":"archivo3"
 		}
 	}
 }
