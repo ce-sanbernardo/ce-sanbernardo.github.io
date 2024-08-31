@@ -8,7 +8,7 @@ Para mayor comodidad alterando cada artículo. </p>
 
 <center>
 <a href="https://google.com.ar"> Probando los enlaces </a> <br>
-<img src="favicon.ico">
+<a href="https://google.com.ar"> <img id="scala" src="favicon.ico"> </a>
 <p> Prueba de Imagenes </p>
 </center>
 
